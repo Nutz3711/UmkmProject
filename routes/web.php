@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\RegisterController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/api/documentation');
 });
+
+// Route::post('/register',RegisterController::class);
+
+// if (App::environment(['production', 'staging'])) {
+//     URL::forceScheme('https');
+// }
