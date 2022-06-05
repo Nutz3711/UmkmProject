@@ -19,6 +19,126 @@
         }
     ],
     "paths": {
+        "/barang": {
+            "get": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Looking Data Barang",
+                "description": "Looking Data Barang",
+                "operationId": "getBarang",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Insert Data Barang Admin",
+                "description": "Insert Data Barang Admin",
+                "operationId": "insertBarang",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nama_barang": {},
+                                    "harga_barang": {},
+                                    "toko": {}
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/barang/{id}": {
+            "put": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Update Data Barang Admin",
+                "description": "Update Data Barang Admin",
+                "operationId": "updateBarang",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Enter Id Data For Update",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nama_barang": {},
+                                    "harga_barang": {},
+                                    "toko": {}
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Delete Data Barang Admin",
+                "description": "Delete Data Barang Admin",
+                "operationId": "deleteBarang",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Enter Id Data For Delete",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/login": {
             "post": {
                 "tags": [
@@ -76,13 +196,161 @@
                 }
             }
         },
+        "/toko": {
+            "get": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Looking Data Toko",
+                "description": "Looking Data Toko",
+                "operationId": "getToko",
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Insert Data Toko Admin",
+                "description": "Insert Data Toko Admin",
+                "operationId": "insertToko",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nama_toko": {},
+                                    "daerah": {},
+                                    "pemilik": {},
+                                    "jenis_toko": {}
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/toko/{id}": {
+            "get": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Get By Id Data Toko Admin",
+                "description": "Get By Id Data Toko Admin",
+                "operationId": "getByIdToko",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Enter Id Data For Get Data And Relation",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Update Data Toko Admin",
+                "description": "Update Data Toko Admin",
+                "operationId": "updateToko",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Enter Id Data For Update",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nama_toko": {},
+                                    "daerah": {},
+                                    "pemilik": {},
+                                    "jenis_toko": {}
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Projects UMKM"
+                ],
+                "summary": "Delete Data Toko Admin",
+                "description": "Delete Data Toko Admin",
+                "operationId": "deleteToko",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Enter Id Data For Delete",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/users": {
             "get": {
                 "tags": [
                     "Projects UMKM"
                 ],
                 "summary": "Looking Account Admin",
-                "description": "Look\n      ing For Account Admin Login",
+                "description": "Looking For Account Admin Login",
                 "operationId": "users",
                 "responses": {
                     "default": {

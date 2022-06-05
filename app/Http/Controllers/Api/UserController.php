@@ -16,8 +16,7 @@ class UserController extends Controller
       *     path="/users",
       *     tags={"Projects UMKM"},
       *     summary="Looking Account Admin",
-      *     description="Look
-      ing For Account Admin Login",
+      *     description="Looking For Account Admin Login",
       *     operationId="users",
       *     @OA\Response(
       *         response="default",
