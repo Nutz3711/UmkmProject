@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::get('/toko', function () {
+    return view('toko');
+});
+Route::get('/barang', function () {
+    return view('barang');
+});
+Route::get('/toko/info', function () {
+    return view('info-toko');
+});
